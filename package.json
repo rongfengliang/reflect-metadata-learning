@@ -1,0 +1,14 @@
+{
+  "name": "reflect",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^1.10.0"
+  },
+  "scripts": {
+    "live": "tsc -w",
+    "start": "node build"
+  }
+}
