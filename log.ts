@@ -4,6 +4,16 @@ function log(target:any,key:any){
     console.log(`${key} type: ${t.name}`);
 }
 
+function cls(): Function {
+    return function (object: Function) {
+        console.dir(object)
+        object.prototype.init = function(){
+            console.log("user   app is init")
+        }
+        return object;
+    };
+}
+
 function logParamTypes(target : any, key : string) {
     var types = Reflect.getMetadata("design:paramtypes", target, key);
     var s = types.map(a => a.name).join();
@@ -13,5 +23,6 @@ export default  log
 
 export {
     log,
-    logParamTypes
+    logParamTypes,
+    cls
 }

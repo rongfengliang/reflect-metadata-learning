@@ -1,6 +1,7 @@
 
-import { log, logParamTypes } from "./log"
+import { log, logParamTypes, cls } from "./log"
 
+@cls()
 class User {
     @log
     @logParamTypes
@@ -18,6 +19,10 @@ class User {
         param7: (a: number) => void,
     ): number {
         return 1
+    }
+
+    init():void{
+        console.log("user is init")
     }
 }
 
